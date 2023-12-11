@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookmarks>
+    <page>
+        <name>Google</name>
+        <description>Motor de búsqueda más conocido del mundo</description>
+        <url>https://www.google.com</url>
+    </page>
+    <page>
+        <name>GitHub</name>
+        <description>Web que ofrece repositorios</description>
+        <url>https://www.github.com</url>
+    </page>
+    <page>
+        <name>TVN</name>
+        <description>Cadena de televisión en Panamá</description>
+        <url>http://www.tvn.com</url>
+    </page>
+    <page>
+        <name>Telemetro</name>
+        <description>Cadena de televisión de Panamá</description>
+        <url>http://www.telemetro.com</url>
+    </page>
+    <page>
+        <name>SofaScore</name>
+        <description>Resultados de deportes</description>
+        <url>https://www.sofascore.com</url>
+    </page>
+    <page>
+        <name>Marca</name>
+        <description>Periódico deportivo</description>
+        <url>https://www.marca.com</url>
+    </page>
+    <page>
+        <name>World Robot Olympiad</name>
+        <description>Olimpiadas Mundiales de Robótica</description>
+        <url>https://wro-association.org/</url>
+    </page>
+    <page>
+        <name>UTP</name>
+        <description>Universidad Tecnológica de Panamá</description>
+        <url>https://www.utp.ac.pa</url>
+    </page>
+    <page>
+        <name>Instagram</name>
+        <description>Red social basada en fotos y videos</description>
+        <url>https://www.instagram.com</url>
+    </page>
+    <page>
+        <name>Facebook</name>
+        <description>Red social más utilizadas en el planeta</description>
+        <url>https://www.facebook.com</url>
+    </page>
+    <page>
+        <name>Universidad de Panamá</name>
+        <description>Universidad Nacional de Panamá</description>
+        <url>https://www.up.ac.pa</url>
+    </page>
+    <page>
+        <name>Twitter/X</name>
+        <description>Red social basada en estados</description>
+        <url>https://www.twitter.com</url>
+    </page>
+</bookmarks>

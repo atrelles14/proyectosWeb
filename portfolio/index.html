@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrés Trelles - Software Engineer</title>
+    <!-- Agregar enlaces a los archivos CSS de Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F2F2F2;
+        }
+
+        .sidebar {
+            width: 20%;
+            height: 100vh;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+
+        .content {
+            margin-left: 30%;
+            padding: 20px;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .position {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            margin-bottom: 20px;
+        }
+
+        .about-button,
+        .resume-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            text-decoration: none;
+            margin-right: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .about-button:hover,
+        .resume-button:hover {
+            background-color: #45a049;
+        }
+
+        .dev-card {
+            margin-bottom: 20px;
+        }
+
+        .skills {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .skills-icon {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="tu-imagen.jpg" alt="Andrés Trelles" class="profile-image">
+        <div class="name">Andrés Trelles</div>
+        <div class="position">Junior Software Engineer</div>
+        <div class="intro">
+            Hi! I'm Andrés Trelles, a software engineer. I know about frontend and backend development for scalable web apps and desktop apps. Want to know how I can help your project?
+        </div>
+        <div class="buttons">
+            <a href="#portfolio" class="about-button">About Portfolio</a>
+            <a href="#resume" class="resume-button">About Resume</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="portfolio">
+            <!-- Contenido del portfolio -->
+        </div>
+
+        <div id="resume">
+            <div class="dev-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title skills">
+                            <img src="javascript-icon.png" alt="JavaScript" class="skills-icon">
+                            JavaScript
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agregar más tarjetas para otros lenguajes -->
+        </div>
+    </div>
+
+    <!-- Agregar enlaces a los archivos JS de Bootstrap 5 y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

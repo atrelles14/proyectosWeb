@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ciudades>
+    <Ciudad Continente="Asia">
+        <Nombre>Osaka</Nombre>
+        <País>Japón</País>
+    </Ciudad>
+    <Ciudad Continente="Oceanía">
+        <Nombre>Melbourne</Nombre>
+        <País>Australia</País>
+    </Ciudad>
+    <Ciudad Continente="Europa">
+        <Nombre>Amsterdam</Nombre>
+        <País>Holanda</País>
+    </Ciudad>
+    <Ciudad Continente="América">
+        <Nombre>Toronto</Nombre>
+        <País>Canadá</País>
+    </Ciudad>
+    <Ciudad Continente="Europa">
+        <Nombre>Frankfurt</Nombre>
+        <País>Alemania</País>
+    </Ciudad>
+    <Ciudad Continente="Europa">
+        <Nombre>Ginebra</Nombre>
+        <País>Suiza</País>
+    </Ciudad>
+    <Ciudad Continente="América">
+        <Nombre>Vancouver</Nombre>
+        <País>Canadá</País>
+    </Ciudad>
+    <Ciudad Continente="Europa">
+        <Nombre>Zurich</Nombre>
+        <País>Suiza</País>
+    </Ciudad>
+    <Ciudad Continente="Europa">
+        <Nombre>Copenhague</Nombre>
+        <País>Dinamarca</País>
+    </Ciudad>
+    <Ciudad Continente="Europa">
+        <Nombre>Viena</Nombre>
+        <País>Austria</País>
+    </Ciudad>
+</Ciudades>
