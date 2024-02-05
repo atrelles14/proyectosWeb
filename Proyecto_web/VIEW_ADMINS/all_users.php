@@ -22,7 +22,7 @@ if ($http_status === 200) {
 
     //Guardar los datos en un archivo JSON
     $json_data = json_encode($datos_usuarios, JSON_PRETTY_PRINT);
-    $file_json = 'datos_usuarios.json';
+    file_put_contents('datos_usuarios.json', $json_data);
     
     //Guardar los datos en un archivo TXT
     $file_txt = 'datos_usuarios.txt';
@@ -641,14 +641,14 @@ footer {
             <?php } ?>
             </div>
     </main>
-            <a href="datos_favoritos.json" download class="button">
+            <a href="datos_usuarios.json" download class="button">
         <img src="\Proyecto_web\icons\css.gg\icons\png\black\software-download.png" alt="Download Icon" class="icon">
         Descargar datos de usuarios en JSON
     </a>
 
     <br><br>
 
-    <a href="datos_favoritos.txt" download class="button">
+    <a href="datos_usuarios.txt" download class="button">
         <img src="\Proyecto_web\icons\css.gg\icons\png\black\software-download.png" alt="Download Icon" class="icon">
         Descargar datos de usuarios en TXT
     </a>

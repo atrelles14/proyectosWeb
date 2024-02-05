@@ -1,0 +1,42 @@
+[
+    {
+        "Usu_ID": "1",
+        "Usu_user": "Gabriela",
+        "Usu_password": "Rito1402",
+        "Usu_email": "gabi@outlook.com",
+        "Usu_nombre": "Lineth",
+        "Usu_apellido": "Hernandez",
+        "Usu_fechacumple": "2002-06-15",
+        "Usu_tipo": "regular"
+    },
+    {
+        "Usu_ID": "2",
+        "Usu_user": "Martin",
+        "Usu_password": "abc12345",
+        "Usu_email": "martin@gmail.com",
+        "Usu_nombre": "Martin",
+        "Usu_apellido": "Romero",
+        "Usu_fechacumple": "2023-11-13",
+        "Usu_tipo": "regular"
+    },
+    {
+        "Usu_ID": "3",
+        "Usu_user": "Admin1",
+        "Usu_password": "administrador1",
+        "Usu_email": "admin@outlook.com",
+        "Usu_nombre": "Admin",
+        "Usu_apellido": "Admin",
+        "Usu_fechacumple": "2023-11-29",
+        "Usu_tipo": "admin"
+    },
+    {
+        "Usu_ID": "4",
+        "Usu_user": "andres1",
+        "Usu_password": "12345abc",
+        "Usu_email": "andres.trelles@utp.ac.pa",
+        "Usu_nombre": "AndresJ",
+        "Usu_apellido": "Trelles",
+        "Usu_fechacumple": "2001-06-14",
+        "Usu_tipo": "regular"
+    }
+]

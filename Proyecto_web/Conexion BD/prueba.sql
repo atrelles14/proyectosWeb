@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-12-2023 a las 07:17:56
+-- Tiempo de generación: 11-12-2023 a las 00:26:45
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.1.17
 
@@ -27,7 +27,6 @@ DELIMITER $$
 --
 -- Procedimientos
 --
-DROP PROCEDURE IF EXISTS `actualizar_apellido`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `actualizar_apellido` (IN `p_id_user` INT, IN `p_nuevo_apellido` VARCHAR(50))   BEGIN
 DECLARE EXIT HANDLER FOR SQLEXCEPTION
     BEGIN
@@ -44,7 +43,6 @@ DECLARE EXIT HANDLER FOR SQLEXCEPTION
     COMMIT;
 END$$
 
-DROP PROCEDURE IF EXISTS `actualizar_email`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `actualizar_email` (IN `p_id_user` INT, IN `p_nuevo_email` VARCHAR(50))   BEGIN
 DECLARE EXIT HANDLER FOR SQLEXCEPTION
     BEGIN
@@ -61,7 +59,6 @@ DECLARE EXIT HANDLER FOR SQLEXCEPTION
     COMMIT;
 END$$
 
-DROP PROCEDURE IF EXISTS `actualizar_fecha`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `actualizar_fecha` (IN `p_id_user` INT, IN `p_nueva_fecha` DATE)   BEGIN
 DECLARE EXIT HANDLER FOR SQLEXCEPTION
     BEGIN
@@ -78,7 +75,6 @@ DECLARE EXIT HANDLER FOR SQLEXCEPTION
     COMMIT;
 END$$
 
-DROP PROCEDURE IF EXISTS `actualizar_nombre`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `actualizar_nombre` (IN `p_id_user` INT, IN `p_nuevo_nombre` VARCHAR(50))   BEGIN
 DECLARE EXIT HANDLER FOR SQLEXCEPTION
     BEGIN
@@ -95,7 +91,6 @@ DECLARE EXIT HANDLER FOR SQLEXCEPTION
     COMMIT;
 END$$
 
-DROP PROCEDURE IF EXISTS `actualizar_password`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `actualizar_password` (IN `p_id_user` INT, IN `p_nueva_password` VARCHAR(15))   BEGIN
 DECLARE EXIT HANDLER FOR SQLEXCEPTION
     BEGIN
@@ -112,7 +107,6 @@ DECLARE EXIT HANDLER FOR SQLEXCEPTION
     COMMIT;
 END$$
 
-DROP PROCEDURE IF EXISTS `actualizar_user`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `actualizar_user` (IN `p_id_user` INT, IN `p_nuevo_user` VARCHAR(50))   BEGIN
 DECLARE EXIT HANDLER FOR SQLEXCEPTION
     BEGIN
@@ -129,9 +123,7 @@ DECLARE EXIT HANDLER FOR SQLEXCEPTION
     COMMIT;
 END$$
 
-DROP PROCEDURE IF EXISTS `Insertar_busqueda`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Insertar_busqueda` (IN `p_nombre` VARCHAR(50))   
-BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Insertar_busqueda` (IN `p_nombre` VARCHAR(50))   BEGIN
     DECLARE cantidad_filas INT;
     DECLARE cancion_existente INT;
 
@@ -160,41 +152,32 @@ END$$
 
 DELIMITER ;
 
-
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `busqueda`
 --
 
-DROP TABLE IF EXISTS `busqueda`;
 CREATE TABLE `busqueda` (
   `Bus_ID` int(11) NOT NULL,
   `Bus_nombre` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- RELACIONES PARA LA TABLA `busqueda`:
---
-
---
 -- Volcado de datos para la tabla `busqueda`
 --
 
 INSERT INTO `busqueda` (`Bus_ID`, `Bus_nombre`) VALUES
-(4, 'left right'),
-(5, 'Dónde está el amor'),
-(6, 'Heart Burn'),
-(7, 'Si Supieras'),
-(8, 'Recuerdame'),
-(9, 'Olvidala'),
-(10, 'Persona ideal'),
-(11, 'Sin sentimientos'),
-(12, 'Mi Libertad'),
-(13, 'Hechizo de Luna');
-
-CALL Insertar_busqueda ('Hechizo de Luna');
-SELECT*FROM busqueda;
+(28, 'Super shy'),
+(29, 'Gotta Go Chungha'),
+(30, 'Si Tu Amor No Vuelve'),
+(31, 'Peek-A-Boo'),
+(32, 'Talk Talk Talk'),
+(33, 'Perfect Night'),
+(34, 'Shadow Seventeen'),
+(35, 'INVU'),
+(36, 'Lovesick Girls'),
+(37, 'Farewall, Neverland');
 
 -- --------------------------------------------------------
 
@@ -202,50 +185,28 @@ SELECT*FROM busqueda;
 -- Estructura de tabla para la tabla `favoritos`
 --
 
-DROP TABLE IF EXISTS `favoritos`;
 CREATE TABLE `favoritos` (
   `Fav_ID` int(11) NOT NULL,
   `Fav_ID_cancion` int(11) DEFAULT NULL,
-  `Fav_nombre_cancion` varchar(150) DEFAULT NULL,
+  `Fav_url` varchar(200) DEFAULT NULL,
+  `Fav_nombre_cancion` varchar(200) DEFAULT NULL,
   `Fav_artista_cancion` varchar(100) DEFAULT NULL,
   `Fav_ID_usuario` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- RELACIONES PARA LA TABLA `favoritos`:
---   `Fav_ID_usuario`
---       `usuario` -> `Usu_ID`
---
-
---
 -- Volcado de datos para la tabla `favoritos`
 --
 
-INSERT INTO `favoritos` (`Fav_ID`, `Fav_ID_cancion`, `Fav_nombre_cancion`, `Fav_artista_cancion`, `Fav_ID_usuario`) VALUES
-(2, 9249219, 'Super Shy', 'NewJeans (뉴진스)', 1),
-(4, 9120330, 'Bite Me', 'ENHYPEN (엔하이픈)', 1),
-(5, 9586157, 'Chasing That Feeling', 'TOMORROW X TOGETHER', 1),
-(6, 8009315, 'DON QUIXOTE', 'SEVENTEEN (세븐틴)', 1),
-(7, 7662944, 'INVU', 'TAEYEON (태연)', 1),
-(8, 7797196, 'LOVE DIVE', 'IVE', 1),
-(9, 3308361, '피카부 (Peek-A-Boo)', 'Red Velvet (레드벨벳)', 1),
-(10, 8856240, 'Like Crazy (English Version)', 'Jimin (지민)', 1),
-(11, 868452, 'Busca Por Dentro', 'Grupo Niche', 2),
-(12, 1975040, 'Persona Ideal', 'Adolescent’s Orquesta', 2),
-(13, 1305889, 'Gitana', 'Willie Colón', 2),
-(14, 1728078, 'Deseandote', 'Frankie Ruiz', 3),
-(15, 2052994, 'Si Tu Amor No Vuelve', 'Binomio De Oro De América', 3),
-(16, 812153, 'Olvidala', 'Binomio De Oro De América', 3),
-(17, 8222243, 'Hype Boy', 'NewJeans (뉴진스)', 1),
-(18, 1795758, 'Donde Estara Mi Primavera', 'Marco Antonio Solís', 3),
-(19, 4355372, 'TOMORROW X TOGETHER - Cat & Dog (Romanized)', 'Genius Romanizations', 1),
-(20, 8541350, 'OMG', 'NewJeans (뉴진스)', 1),
-(21, 3830550, 'EXO - 전야 (前夜) (The Eve) (Romanized)', 'Genius Romanizations', 1),
-(22, 8377153, '28 Reasons', 'SEULGI', 1),
-(23, 6570853, 'After School', 'Weeekly (위클리)', 1),
-(24, 3227324, 'Saturno', 'Pablo Alborán', 2),
-(25, 1391052, 'Mi Libertad', 'Frankie Ruiz', 3),
-(26, 1614797, 'Hechizo De Luna', 'Edgar Joel', 3);
+INSERT INTO `favoritos` (`Fav_ID`, `Fav_ID_cancion`, `Fav_url`, `Fav_nombre_cancion`, `Fav_artista_cancion`, `Fav_ID_usuario`) VALUES
+(28, 8856222, 'https://images.genius.com/89647413510027992f481c07fa5b3031.1000x1000x1.png ', 'Like Crazy', 'Jimin (지민)', 1),
+(29, 8661650, 'https://images.genius.com/9cf3a531ebd34bde09a430863ea5ca99.1000x1000x1.jpg ', '네버랜드를 떠나며 (Farewell, Neverland)', 'TOMORROW X TOGETHER', 5),
+(30, 9610509, 'https://images.genius.com/c217060fe0bb7c57d6044869cda7aee0.1000x1000x1.jpg ', 'Perfect Night', 'LE SSERAFIM', 5),
+(31, 9249219, 'https://images.genius.com/fcd2e5a2ade130083470b2143deafce4.1000x1000x1.png ', 'Super Shy', 'NewJeans (뉴진스)', 5),
+(32, 8661650, 'https://images.genius.com/9cf3a531ebd34bde09a430863ea5ca99.1000x1000x1.jpg ', '네버랜드를 떠나며 (Farewell, Neverland)', 'TOMORROW X TOGETHER', 1),
+(33, 9610509, 'https://images.genius.com/c217060fe0bb7c57d6044869cda7aee0.1000x1000x1.jpg ', 'Perfect Night', 'LE SSERAFIM', 1),
+(34, 8009318, 'https://images.genius.com/2d4bd41fe1f4e593b8294351ed180c06.1000x1000x1.png ', 'Shadow', 'SEVENTEEN (세븐틴)', 1),
+(35, 7662944, 'https://images.genius.com/19ed6351954c2b686b79302ae0c1e55c.1000x1000x1.png ', 'INVU', 'TAEYEON (태연)', 1);
 
 -- --------------------------------------------------------
 
@@ -253,7 +214,6 @@ INSERT INTO `favoritos` (`Fav_ID`, `Fav_ID_cancion`, `Fav_nombre_cancion`, `Fav_
 -- Estructura de tabla para la tabla `usuario`
 --
 
-DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `Usu_ID` int(11) NOT NULL,
   `Usu_user` varchar(50) DEFAULT NULL,
@@ -266,10 +226,6 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- RELACIONES PARA LA TABLA `usuario`:
---
-
---
 -- Volcado de datos para la tabla `usuario`
 --
 
@@ -277,7 +233,8 @@ INSERT INTO `usuario` (`Usu_ID`, `Usu_user`, `Usu_password`, `Usu_email`, `Usu_n
 (1, 'Gabriela', 'Rito1402', 'gabi@outlook.com', 'Lineth', 'Hernandez', '2002-06-15', 'regular'),
 (2, 'Martin', 'abc12345', 'martin@gmail.com', 'Martin', 'Romero', '2023-11-13', 'regular'),
 (3, 'Admin1', 'administrador1', 'admin@outlook.com', 'Admin', 'Admin', '2023-11-29', 'admin'),
-(4, 'Andres1', '12345abc', 'andres@gmail.com', 'Andres', 'Trelles', '2001-06-14', 'regular');
+(4, 'Andres1', '12345abc', 'andres@gmail.com', 'Andres', 'Trelles', '2001-06-14', 'regular'),
+(5, 'Eva', 'Rito1406', 'eva@gmail.com', 'Eva', 'Hernandez', '1987-12-27', 'regular');
 
 --
 -- Índices para tablas volcadas
@@ -310,19 +267,19 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `busqueda`
 --
 ALTER TABLE `busqueda`
-  MODIFY `Bus_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `Bus_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT de la tabla `favoritos`
 --
 ALTER TABLE `favoritos`
-  MODIFY `Fav_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `Fav_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `Usu_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Usu_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restricciones para tablas volcadas

@@ -55,7 +55,7 @@ $username = $_SESSION['usuario'];
         }
 
         .logo img {
-            width: 30px;
+            width: 30%;
         }
 
         .header-container {
@@ -243,7 +243,7 @@ form.logout-form {
 
         .input-search {
             height: 10px;
-            width: 20px;
+            width: 150px;
             border-style: none;
             padding: 10px 10px;
             font-size: 18px;
@@ -427,17 +427,17 @@ footer {
 </head>
 <header class="header-container">
     <div class="logo">
-        <a href="../VIEW_ADMINS/index_users.php">
+        <a href="../VIEW_USERS/index_users.php">
             <img src="../image/logo.png" alt="logo">
         </a>
     </div>
         <nav>
             <ul>
-                <li><a href="../VIEW_ADMINS/favoritos_user.php"> Mis Favoritos</a></li>
+                <li><a href="../VIEW_USERS/favoritos_user.php"> Mis Favoritos</a></li>
             </ul>
         </nav>
         <div class="cuenta">
-            <a href="../VIEW_ADMINS/perfil_user.php">
+            <a href="../VIEW_USERS/perfil_user.php">
                 <img src="/Proyecto_web/icons/css.gg/icons/png/black/user.png" alt="icono">
             </a>
             <div class="personal_info">
@@ -451,9 +451,9 @@ footer {
 <body>
 <div class="option-container">
         <!-- Utilizamos JavaScript para llamar a la función history.back() -->
-        <a href="/Proyecto_web/VIEW_USERS/index_user.php" class="back-to-home-btn">
-        <img src="/Proyecto_web/icons/css.gg/icons/png/white/arrow-long-left.png" alt="Inicio">
-            INICIO
+        <a href="../VIEW_USERS/index_users.php" class="back-to-home-btn">
+        <img src="/Proyecto_web/icons/css.gg/icons/png/white/arrow-long-left.png" alt="Volver atrás">
+            Volver al Home
         </a>
         <form action="../API_canciones/call_api_user.php" method="post" class="search-form">
             <div class="search-box">
@@ -468,6 +468,7 @@ footer {
             processApiResponseLetra($response_letra);
         ?>
         </div>
+        <!-- de aqui para abajo se puede borrar like X -->
     </section>
     <footer>
         <div class="column-container">
@@ -478,18 +479,18 @@ footer {
             </div>
             <div class="column">
                 <h5>Romero, Martin</h5>
-                <p>8-985-772</p>
-                <p>martin.romero@utp.ac.pa</p>
+                <p>8-983-1051</p>
+                <p>gabriela.albaez@utp.ac.pa</p>
             </div>
             <div class="column">
                 <h5>Trelles, Andrés</h5>
-                <p>8-971-969</p>
-                <p>andres.trelles@utp.ac.pa</p>
+                <p>8-983-1051</p>
+                <p>gabriela.albaez@utp.ac.pa</p>
             </div>
             <div class="column">
                 <h5>Valoy, Britney</h5>
-                <p>8-998-213</p>
-                <p>britney.valoy@utp.ac.pa</p>
+                <p>8-983-1051</p>
+                <p>gabriela.albaez@utp.ac.pa</p>
             </div>
         </div>
     </footer>

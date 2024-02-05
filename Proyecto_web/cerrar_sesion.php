@@ -10,7 +10,7 @@ if (isset($_POST['cerrar_sesion'])) {
     session_destroy();
 
     // Redirigir a la página de inicio de sesión después de cerrar sesión
-    header("Location: login.php");
+    header("Location: Login.php");
     exit();
 }
 

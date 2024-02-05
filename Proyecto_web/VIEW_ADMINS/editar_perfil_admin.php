@@ -671,7 +671,7 @@ if (isset($_GET['id']) && isset($_GET['campo'])) {
     if ($campo_editar === 'Usu_user') {
         ?>
             <h1>Editar nombre de usuario</h1>
-<form action="../VIEW_ADMINS/EDITAR_PERFIL/editar_admin.php?id=<?php echo $id_usuario ?>" method="POST" class="form-container">
+<form action="../VIEW_ADMINS/EDITAR_PERFIL_ADMIN/editar_user_admin.php?id=<?php echo $id_usuario ?>" method="POST" class="form-container">
     <?php
     echo "<h2>Usuario actual: " . $row['Usu_user'] . "</h2>";
     ?>
@@ -687,7 +687,7 @@ if (isset($_GET['id']) && isset($_GET['campo'])) {
 } elseif ($campo_editar === 'Usu_password') {
     ?>
   <h1>Editar contraseña</h1>
-    <form action="../VIEW_ADMINS/EDITAR_PERFIL/editar_password.php?id=<?php echo $id_usuario ?>" method="POST" class="form-container">
+    <form action="../VIEW_ADMINS/EDITAR_PERFIL_ADMIN/editar_password_admin.php?id=<?php echo $id_usuario ?>" method="POST" class="form-container">
         <?php
         echo "<h2>Contraseña actual: " . $row['Usu_password'] . "</h2>";
         ?>
@@ -702,7 +702,7 @@ if (isset($_GET['id']) && isset($_GET['campo'])) {
 } elseif ($campo_editar === 'Usu_email') {
 ?>
     <h1>Editar correo electrónico</h1>
-    <form action="../VIEW_ADMINS../EDITAR_PERFIL/editar_email.php?id=<?php echo $id_usuario ?>" method="POST" class="form-container">
+    <form action="../VIEW_ADMINS../EDITAR_PERFIL_ADMIN/editar_email_admin.php?id=<?php echo $id_usuario ?>" method="POST" class="form-container">
         <?php
         echo "<h2>Correo actual: " . $row['Usu_email'] . "</h2>";
         ?>
@@ -717,7 +717,7 @@ if (isset($_GET['id']) && isset($_GET['campo'])) {
 } elseif ($campo_editar === 'Usu_nombre') {
 ?>
     <h1>Editar nombre</h1>
-    <form action="../VIEW_ADMINS../EDITAR_PERFIL/editar_nombre.php?id=<?php echo $id_usuario ?>" method="POST" class="form-container">
+    <form action="../VIEW_ADMINS../EDITAR_PERFIL_ADMIN/editar_nombre_admin.php?id=<?php echo $id_usuario ?>" method="POST" class="form-container">
         <?php
         echo "<h2>Nombre actual: " . $row['Usu_nombre'] . "</h2>";
         ?>
@@ -732,7 +732,7 @@ if (isset($_GET['id']) && isset($_GET['campo'])) {
 } elseif ($campo_editar === 'Usu_apellido') {
 ?>
     <h1>Editar apellido</h1>
-    <form action="../VIEW_ADMINS../EDITAR_PERFIL/editar_apellido.php?id=<?php echo $id_usuario ?>" method="POST" class="form-container">
+    <form action="../VIEW_ADMINS../EDITAR_PERFIL_ADMIN/editar_apellido_admin.php?id=<?php echo $id_usuario ?>" method="POST" class="form-container">
         <?php
         echo "<h2>Apellido actual: " . $row['Usu_apellido'] . "</h2>";
         ?>
@@ -747,7 +747,7 @@ if (isset($_GET['id']) && isset($_GET['campo'])) {
 } elseif ($campo_editar === 'Usu_fechacumple') {
 ?>
     <h1>Editar fecha de nacimiento</h1>
-    <form action="../VIEW_ADMINS../EDITAR_PERFIL/editar_fecha.php?id=<?php echo $id_usuario ?>" method="POST" class="form-container">
+    <form action="../VIEW_ADMINS../EDITAR_PERFIL_ADMIN/editar_fecha_admin.php?id=<?php echo $id_usuario ?>" method="POST" class="form-container">
         <?php
         echo "<h2>Fecha actual: " . $row['Usu_fechacumple'] . "</h2>";
         ?>

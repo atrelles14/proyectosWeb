@@ -27,6 +27,9 @@ body {
     padding: 0;
     background-color: #f1f1f1;
 }
+.logo img {
+    width: 30%;
+}
 form.logout-form {
         margin: 0;
         padding: 0;
@@ -190,7 +193,7 @@ footer {
         </div>
         <nav>
             <ul>
-                <li><a href="../VIEW_ADMINS/favoritos_ADMIN.php"> Mis Favoritos</a></li>
+                <li><a href="../VIEW_ADMINS/favoritos_admin.php"> Mis Favoritos</a></li>
                 <li><a href="../VIEW_ADMINS/view_admin.php"> ADMIN</a></li>
             </ul>
         </nav>
@@ -199,7 +202,7 @@ footer {
             if (isset($_SESSION['usuario'])) {
                 // Si hay un usuario autenticado, muestra el saludo y la información relacionada
                 echo '<div class="cuenta">';
-                echo '<a href="../VIEW_ADMIN/perfil_ADMIN.php">';
+                echo '<a href="../VIEW_ADMINS/perfil_admin.php">';
                 echo '<img src="/Proyecto_web/icons/css.gg/icons/png/black/user.png" alt="icono">';
                 echo '</a>';
                 echo '<div class="personal_info">';

@@ -399,17 +399,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </head>
         <header class="header-container">
     <div class="logo">
-        <a href="../VIEW_USERS/index_users.php">
+        <a href="../VIEW_ADMINS/index_admin.php">
             <img src="../../image/logo.png" alt="logo">
         </a>
     </div>
         <nav>
             <ul>
-                <li><a href="../VIEW_USERS/favoritos_admin.php"> Mis Favoritos</a></li>
+                <li><a href="../VIEW_ADMINS/favoritos_admin.php"> Mis Favoritos</a></li>
             </ul>
         </nav>
         <div class="cuenta">
-            <a href="../VIEW_USERS/perfil_admin.php">
+            <a href="../VIEW_ADMINS/perfil_admin.php">
             <img src="/Proyecto_web/icons/css.gg/icons/png/white/arrow-long-left.png" alt="Volver atrás">
             </a>
             <div class="personal_info">
@@ -423,9 +423,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 <div class="option-container">
         <!-- Utilizamos JavaScript para llamar a la función history.back() -->
-        <a href="../../VIEW_USERS/perfil_admin.php" class="back-to-home-btn">
+        <a href="../../Login.php" class="back-to-home-btn">
         <img src="/Proyecto_web/icons/css.gg/icons/png/white/arrow-long-left.png" alt="Volver atrás">
-            Volver al perfil
+            Volver a Iniciar Sesion
         </a>
         <form action="../../API_canciones/call_api_admin.php" method="post" class="search-form">
             <div class="search-box">

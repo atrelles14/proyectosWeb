@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     }
 
     // Consulta SQL para obtener los datos del usuario usando los parámetros
-    $sql = "SELECT Fav_nombre_cancion, Fav_artista_cancion FROM favoritos WHERE Fav_ID_usuario = ?";
+    $sql = "SELECT Fav_url, Fav_nombre_cancion, Fav_artista_cancion FROM favoritos WHERE Fav_ID_usuario = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $id_usuario);
     $stmt->execute();

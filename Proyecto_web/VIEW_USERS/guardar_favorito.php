@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //Preparar la consulta para insertar en la base de datos
     $sql = "INSERT INTO favoritos (Fav_ID_cancion, Fav_url, Fav_nombre_cancion, Fav_artista_cancion, Fav_ID_usuario) VALUES ('$id', '$url_imagen', '$nombre_cancion', '$nombre_artista', '$id_usuario')";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($conn->query($sql) === true) {
         $mensajeExito = "Canción añadida a favoritos correctamente";
 
     //Cookie que almacena ultima canción agregada a favoritos

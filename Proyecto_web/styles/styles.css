@@ -56,10 +56,6 @@ body {
     }
 }
 
-.logo img {
-    width: 30px;
-}
-
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -71,14 +67,11 @@ body {
 
 nav ul {
     list-style: none;
-    display: flex; /* Use flexbox to arrange items horizontally */
-    justify-content: flex-end;
+    display: center;
 }
 
 nav ul li {
-    margin-right: 22px;
-    justify-content: flex-end;
-    display: inline; /* Make the list items inline */
+    margin-right: 250px;
 }
 
 nav ul li a {
@@ -89,7 +82,6 @@ nav ul li a {
     letter-spacing: 1px;
     transition: 0.5s;
 }
-
 
 .cuenta {
     display: flex;
@@ -179,13 +171,13 @@ footer {
 }
 
 .additional-info {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .additional-info table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra para resaltar la tabla */
     border-radius: 8px;
     overflow: hidden; /* Para redondear las esquinas */

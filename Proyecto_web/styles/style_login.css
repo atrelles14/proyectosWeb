@@ -23,8 +23,8 @@ section .container {
     background: #fff;
     box-shadow: 0 15px 50px rgb(0 0 0 / 10%);
     overflow: hidden;
-    left: 320px;
-    top: 50px;
+    left: 220px;
+    top: 20px;
 }
 
 

@@ -12,7 +12,7 @@
         CURLOPT_CUSTOMREQUEST => "GET",
         CURLOPT_HTTPHEADER => [
             "X-RapidAPI-Host: genius-song-lyrics1.p.rapidapi.com",
-            "X-RapidAPI-Key: f38b4de133msh33ba75d8f3a737ep169b9fjsnb97b946034bc"
+            "X-RapidAPI-Key: 08b9cfe7ccmsh8fd344982472013p1d0356jsndba8e3d5e668"
         ],
     ]);
 

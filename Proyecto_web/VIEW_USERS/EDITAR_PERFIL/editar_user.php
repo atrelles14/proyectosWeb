@@ -423,9 +423,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 <div class="option-container">
         <!-- Utilizamos JavaScript para llamar a la función history.back() -->
-        <a href="../../VIEW_USERS/perfil_user.php" class="back-to-home-btn">
+        <a href="../../Login.php" class="back-to-home-btn">
         <img src="/Proyecto_web/icons/css.gg/icons/png/white/arrow-long-left.png" alt="Volver atrás">
-            Volver al perfil
+            Volver a Iniciar Sesión
         </a>
         <form action="../../API_canciones/call_api_user.php" method="post" class="search-form">
             <div class="search-box">

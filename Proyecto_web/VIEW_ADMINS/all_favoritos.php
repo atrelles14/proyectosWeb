@@ -629,14 +629,14 @@ footer {
     </main>
     <a href="datos_favoritos.json" download class="button">
         <img src="\Proyecto_web\icons\css.gg\icons\png\white\software-download.png" alt="Download Icon" class="icon">
-        Descargar datos de usuarios en JSON
+        Descargar datos de favoritos en JSON
     </a>
 
     <br><br>
 
     <a href="datos_favoritos.txt" download class="button">
         <img src="\Proyecto_web\icons\css.gg\icons\png\white\software-download.png" alt="Download Icon" class="icon">
-        Descargar datos de usuarios en TXT
+        Descargar datos de favoritos en TXT
     </a>
 
     <br><br>

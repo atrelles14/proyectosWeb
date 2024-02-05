@@ -44,6 +44,10 @@ if ($http_status === 200) {
             padding: 0;
             background-color: #f1f1f1;
         }
+        .logo img {
+        width: 30%;
+        }
+
         html {
     min-height: 100%;
     }        
@@ -99,7 +103,7 @@ if ($http_status === 200) {
         .input-search {
             font-family: 'Poppins', sans-serif;
             height: 10px;
-            width: 20px;
+            width: 250px;
             border-style: none;
             padding: 10px 10px;
             font-size: 18px;
@@ -174,7 +178,7 @@ if ($http_status === 200) {
         }
 
         nav ul li {
-            margin-right: 20px;
+            margin-right: 170px;
         }
 
         nav ul li a {
@@ -382,7 +386,7 @@ if ($http_status === 200) {
             <tr>
                 <td><strong><?php echo $label; ?>:</strong></td>
                 <td><?php echo $datos_usuario[$campo]; ?></td>
-                <td><a href='../VIEW_ADMINS/editar_perfil.php?campo=<?php echo $campo; ?>&id=<?php echo $id_usuario; ?>'>Editar</a></td>
+                <td><a href='../VIEW_ADMINS/editar_perfil_admin.php?campo=<?php echo $campo; ?>&id=<?php echo $id_usuario; ?>'>Editar</a></td>
             </tr>
             <?php
         }

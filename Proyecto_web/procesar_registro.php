@@ -92,17 +92,58 @@ $conn->close();
 
 
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Respuesta</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('image/Fondo_mensaje.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+        }
+
+        .message-box {
+            background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .message-box p {
+            margin-bottom: 15px;
+        }
+
+        .message-box a {
+            color: #fff;
+            text-decoration: none;
+            background-color: #677eff;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .message-box a:hover {
+            background-color: #4750cc;
+        }
+    </style>
 </head>
 <body>
+    <div class="message-box">
     <?php
     // Si es un mensaje de registro exitoso
     if (!empty($mensajeExito)) {
         echo "<p>$mensajeExito</p>";
-        echo '<a href="index.php">Ir a Iniciar Sesión</a>';
+        echo '<a href="Login.php">Ir a Iniciar Sesión</a>';
     }
     // Si es un mensaje de error
     elseif (!empty($errorLongitud) || !empty($errorCorreo) || !empty($errorExistencia) || !empty($mensajeError)) {
@@ -121,5 +162,6 @@ $conn->close();
         echo '<a href="Registro.php">Volver al Formulario</a>';
     }
     ?>
+    </div>
 </body>
 </html>

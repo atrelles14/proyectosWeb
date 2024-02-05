@@ -1,14 +1,4 @@
 <?php
-
-if (!isset($_SESSION['usuario'])) {
-    header("Location: index.php");
-    exit(); 
-}
-$username = $_SESSION['usuario'];
-$id_usuario = $_SESSION['id_usuario'];
-?>
-
-<?php
     function processApiResponse($response) {
         $data = json_decode($response, true);
         $count = 0;
@@ -45,20 +35,17 @@ $id_usuario = $_SESSION['id_usuario'];
             echo '</div>'; // Cierre de div.contenido
     
             echo '<div class="botones">';
-            echo '<form action="../API letras/call_api_letra_user.php" method="post">';
+            echo '<form action="../API letras/call_api_letra.php" method="post">';
             echo '<input type="hidden" name="id" value="' . $id . '">';
             echo '<button type="submit">Lyrics</button>';
             echo '</form>';
             echo '</div>'; // Cierre de div.botones
     
             echo '<div class="botones">';
-            echo '<form action="../VIEW_USERS/guardar_favorito.php" method="post">';
             echo '<input type="hidden" name="id" value="' . $id . '">';
             echo '<input type="hidden" name="imagen_cancion" value="' . $header_image_url . ' ">';
             echo '<input type="hidden" name="nombre_cancion" value="' . $title_with_featured . '">';
             echo '<input type="hidden" name="nombre_artista" value="' . $primary_artist_name . '">';
-            echo '<button type="submit">Favoritos</button>';
-            echo '</form>';
             echo '</div>';
             echo '</div>';
             echo '</div>';
@@ -147,7 +134,7 @@ nav ul li a.btn-login:hover {
 }
 
 .logo img {
-    width: 30px;
+    width: 30%;
 }
 
 /* Estilos para las canciones */
@@ -325,7 +312,7 @@ form.logout-form {
 
         .input-search {
             height: 10px;
-            width: 20px;
+            width: 150px;
             border-style: none;
             padding: 10px 10px;
             font-size: 18px;
@@ -559,26 +546,19 @@ footer {
 </head>
 <header class="header-container">
     <div class="logo">
-        <a href="../VIEW_USERS/index_users.php">
+        <a href="../index.php">
             <img src="../image/logo.png" alt="logo">
         </a>
     </div>
         <nav>
-            <ul>
-                <li><a href="../VIEW_USERS/favoritos_user.php"> Mis Favoritos</a></li>
-            </ul>
         </nav>
         <div class="cuenta">
-            <a href="../VIEW_USERS/perfil_user.php">
             <img src="/Proyecto_web/icons/css.gg/icons/png/white/arrow-long-left.png" alt="Volver atrás">
             </a>
-            <div class="personal_info">
-                ¡Hola <?php echo $username; ?>!<br><br>
-                <form action="../cerrar_sesion.php" method="post" class="logout-form">
-                <button type="submit" name="cerrar_sesion">Cerrar Sesión</button>
-            </form>
-            </div>
         </div>
+        <?php
+                echo '<a href="../Login.php">Iniciar Sesión</a>';
+            ?>
     </header>
 <body>
 <div class="option-container">
@@ -587,7 +567,7 @@ footer {
         <img src="/Proyecto_web/icons/css.gg/icons/png/white/arrow-long-left.png" alt="Volver atrás">
             Volver atrás
         </a>
-        <form action="../API_canciones/call_api_user.php" method="post" class="search-form">
+        <form action="../API_canciones/call_api.php" method="post" class="search-form">
             <div class="search-box">
                 <input type="text" name="nombre" id="nombre" class="input-search" placeholder="Buscar canción">
                 <button type="submit" class="btn-search"><i class="fas fa-search"></i></button>
@@ -602,7 +582,6 @@ footer {
         ?>
         </div>
     </div>
-    <a href="../VIEW_USERS/index_users.php">Volver</a>
     <footer>
         <div class="column-container">
             <div class="column">
@@ -612,18 +591,18 @@ footer {
             </div>
             <div class="column">
                 <h5>Romero, Martin</h5>
-                <p>8-983-1051</p>
-                <p>gabriela.albaez@utp.ac.pa</p>
+                <p>8-985-772</p>
+                <p>martin.romero@utp.ac.pa</p>
             </div>
             <div class="column">
                 <h5>Trelles, Andrés</h5>
-                <p>8-983-1051</p>
-                <p>gabriela.albaez@utp.ac.pa</p>
+                <p>8-971-969</p>
+                <p>andres.trelles@utp.ac.pa</p>
             </div>
             <div class="column">
                 <h5>Valoy, Britney</h5>
-                <p>8-983-1051</p>
-                <p>gabriela.albaez@utp.ac.pa</p>
+                <p>8-998-213</p>
+                <p>britney.valoy@utp.ac.pa</p>
             </div>
         </div>
     </footer>
